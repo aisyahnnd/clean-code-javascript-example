@@ -25,3 +25,8 @@ for (let i = 0; i < programmerOutput.length; i++) {
 }
 
 // Good Code
+const INITIAL_VALUE = 0;
+
+const totalOutput = programmerOutput
+  .map((programmer) => programmer.linesOfCode)
+  .reduce((acc, linesOfCode) => acc + linesOfCode, INITIAL_VALUE);

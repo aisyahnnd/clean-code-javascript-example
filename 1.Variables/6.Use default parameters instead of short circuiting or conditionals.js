@@ -5,3 +5,6 @@ function createTrainingRequest(number) {
 }
 
 // Good Code
+function createTrainingRequest(requestNumber = "TRQ00123") {
+  // ...
+}

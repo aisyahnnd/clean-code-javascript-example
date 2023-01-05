@@ -5,3 +5,4 @@ doStuff();
 // doSoMuchStuff();
 
 // Good Code
+doStuff();

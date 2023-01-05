@@ -8,3 +8,16 @@ getdata()
   });
 
 // Good Code
+getdata()
+  .then((data) => {
+    functionThatMightThrow(data);
+  })
+  .catch((error) => {
+    // Satu opsi (lebih berisik daripada console.log):
+    console.error(error);
+    // Opsi lain:
+    notifyUserOfError(error);
+    // Opsi lain:
+    reportErrorToService(error);
+    // Atau lakukan ketiganya!
+  });

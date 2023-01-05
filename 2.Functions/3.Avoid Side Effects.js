@@ -1,6 +1,4 @@
 // Bad Code
-// Global variable referenced by following function.
-// If we had another function that used this name, now it'd be an array and it could break it.
 let name = "Ryan McDermott";
 
 function splitIntoFirstAndLastName() {
@@ -12,10 +10,12 @@ splitIntoFirstAndLastName();
 console.log(name); // ['Ryan', 'McDermott'];
 
 // Good Code
+function splitIntoFirstAndLastName(name) {
+  return name.split(" ");
+}
 
-// Bad Code
-const addItemToCart = (cart, item) => {
-  cart.push({ item, date: Date.now() });
-};
+const name = "Ryan McDermott";
+const newName = splitIntoFirstAndLastName(name);
 
-// Good Code
+console.log(name); // 'Ryan McDermott';
+console.log(newName); // ['Ryan', 'McDermott'];

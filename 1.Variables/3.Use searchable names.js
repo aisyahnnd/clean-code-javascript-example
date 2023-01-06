@@ -10,3 +10,8 @@ if (codeStatus === 54) {
 const MILLISECONDS_PER_DAY = 60 * 60 * 24 * 1000; //86400000;
 
 setTimeout(blastOff, MILLISECONDS_PER_DAY);
+
+const KEY_CODE = 54;
+if (codeStatus === KEY_CODE) {
+  // ...
+}
